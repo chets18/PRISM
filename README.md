@@ -1,5 +1,19 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Introduction
+Alright, you're warmly welcome in this mission. This platform is build on the mission to make education sustain. let me describe what this website will going to serve you:
+1. You can create your own robotics items just by drag and drop components
+2. You can simulate the robotics items just by clicking a button.
+3. You can export the robotics items to the real world in format like urdf.
+4. You can share the robotics items with your friends and work on team.
+5. You can learn about robotics hands-on without heavily depends upon hardware.
+
+This platform is not going to be only for begineer who want to learn or create robot but also for those professional, export who want to understand physics engine and lego like design.
+This platform might contains some vulnerable or error so please ignore them and keep moving. Email me on chetsjaishi@gmail.com give me suggestions, send me appreciation *haha*, give me some feedbacks and also you can contribute in this repo. 
+
+This project may open source but not decided yet.
+That's all from my side. Now, what the product will come up AI will decide. I'm a vibe coder but i can code logically. I'll document my journey in linkdin so, you can checkout my linkdin profile too. search "chetraj jaishi" in linkdin. I think that this project might take upto a year to complete but genuienly i want to set time of 8 month to release MVP.
+
 ## Getting Started
 
 First, run the development server:
