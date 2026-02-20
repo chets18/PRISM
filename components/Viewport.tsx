@@ -80,34 +80,40 @@ const Model = ({
         }
     };
 
-    return (
-        <PivotControls
-            active={isSelected}
-            anchor={[0, 0, 0]}
-            depthTest={false}
-            displayValues={false}
-            lineWidth={2}
-            fixed={false}
-            onDragEnd={() => {
-                if (meshRef.current) {
-                    const worldPos = new THREE.Vector3();
-                    meshRef.current.getWorldPosition(worldPos);
-                    onDragEnd([worldPos.x, worldPos.y, worldPos.z]);
-                }
+    const content = (
+        <group
+            ref={meshRef}
+            position={position}
+            onClick={(e) => {
+                e.stopPropagation();
+                onClick(e);
             }}
         >
-            <group
-                ref={meshRef}
-                position={position}
-                onClick={(e) => {
-                    e.stopPropagation();
-                    onClick(e);
+            {renderGeometry()}
+        </group>
+    );
+
+    if (isSelected) {
+        return (
+            <PivotControls
+                anchor={[0, 0, 0]}
+                depthTest={false}
+                lineWidth={2}
+                fixed={false}
+                onDragEnd={() => {
+                    if (meshRef.current) {
+                        const worldPos = new THREE.Vector3();
+                        meshRef.current.getWorldPosition(worldPos);
+                        onDragEnd([worldPos.x, worldPos.y, worldPos.z]);
+                    }
                 }}
             >
-                {renderGeometry()}
-            </group>
-        </PivotControls>
-    );
+                {content}
+            </PivotControls>
+        );
+    }
+
+    return content;
 };
 
 export default function Viewport({
